@@ -59,18 +59,18 @@ function showError(msg) {
   }, 2000);
 }
 
-function searchImages() {
+async function searchImages() {
   const input = document.querySelector("#termino").value;
 
   const API_KEY = "41783426-796452a40e4a9900db65b9de1";
   const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${input}&per_page=${imagesPerPage}&page=${actualPage}`;
 
-  fetch(URL)
-    .then((res) => res.json())
-    .then((data) => {
-      totalPages = getTotalPages(data.totalHits);
-      showImages(data.hits);
-    });
+  // Async await
+  const response = await fetch(URL);
+  const data = await response.json();
+
+  totalPages = getTotalPages(data.totalHits);
+  showImages(data.hits);
 }
 
 function showImages(images) {
@@ -148,7 +148,7 @@ function showPager() {
       $btn.classList.add("bg-blue-700");
     }
 
-    $btn.onclick = (e) => {
+    $btn.onclick = () => {
       actualPage = value;
 
       searchImages();
