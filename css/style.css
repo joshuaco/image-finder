@@ -83,18 +83,6 @@ section {
   padding: 16px 32px;
 }
 
-/* section div {
-  width: 300px;
-  height: 350px;
-  background-color: #dedede;
-  margin-top: 8px;
-  border-radius: 4px;
-
-  animation: reveal linear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
-} */
-
 section img {
   border-radius: 4px;
   max-width: 400px;
