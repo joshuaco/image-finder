@@ -1,6 +1,6 @@
 # Image Finder
 
-![image](<![image](https://github.com/joshuaco/image-finder/assets/9096557/831df0ac-0a71-4b2d-8655-1d8545d6610a)>)
+![image](screenshot-21-01-24.png)
 
 Project to find images from Pixabay API.
 
