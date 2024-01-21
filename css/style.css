@@ -8,9 +8,10 @@ body {
 
 header {
   display: flex;
-  padding: 16px 64px;
+  padding: 16px 32px;
   position: sticky;
   top: 0;
+  justify-content: space-evenly;
 
   animation: enhance-header linear both;
   animation-timeline: scroll(root block);
@@ -52,7 +53,7 @@ form button {
 h1 {
   color: #fefefe;
   margin: 0;
-  padding: 16px 110px;
+  padding: 16px 32px;
 }
 
 @keyframes enhance-header {
@@ -63,6 +64,15 @@ h1 {
     color: #333;
     padding: 4px 8px;
   }
+}
+
+p {
+  color: #fefefe;
+  margin: 0;
+  padding: 16px 32px;
+  align-self: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 section {

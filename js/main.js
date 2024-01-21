@@ -11,7 +11,7 @@ async function getImages(event) {
     return;
   }
 
-  const url = `https://pixabay.com/api/?key=41783426-796452a40e4a9900db65b9de1&q=${$input.value}&image_type=photo`;
+  const url = `https://pixabay.com/api/?key=41783426-796452a40e4a9900db65b9de1&q=${$input.value}&per_page=100&image_type=photo`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -27,6 +27,7 @@ async function getImages(event) {
 }
 
 function displayImages(images) {
+  cleanHTML();
   const $section = document.querySelector("section");
 
   images.forEach((image) => {
@@ -35,4 +36,11 @@ function displayImages(images) {
     $img.alt = image.tags;
     $section.appendChild($img);
   });
+}
+
+function cleanHTML() {
+  const $section = document.querySelector("section");
+  while ($section.firstChild) {
+    $section.removeChild($section.firstChild);
+  }
 }
